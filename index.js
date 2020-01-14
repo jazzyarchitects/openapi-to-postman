@@ -1,6 +1,7 @@
 'use strict';
 
-const SchemaPack = require('./lib/schemapack.js').SchemaPack;
+const { SchemaPack, SchemaPackOrchestrator } = require('./lib/schemapack.js');
+global.validationWorkerCount = 0;
 
 module.exports = {
   // Old API wrapping the new API
@@ -24,5 +25,6 @@ module.exports = {
   },
 
   // new API
-  SchemaPack
+  SchemaPack,
+  SchemaPackOrchestrator
 };
